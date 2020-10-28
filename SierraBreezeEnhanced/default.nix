@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
 	buildInputs = [ cmake sudo extra-cmake-modules plasma5.kdecoration qt5.qtdeclarative qt5.qtx11extras plasma-desktop libsForQt5.kcoreaddons libsForQt5.kguiaddons libsForQt5.kconfigwidgets libsForQt5.kwindowsystem libsForQt5.kiconthemes ];
 
 	installPhase = ''
-		cmake .. -DCMAKE_INSTALL_PREFIX=$out/usr -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_LIBDIR=lib -DBUILD_TESTING=OFF -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+		cmake .. -DCMAKE_INSTALL_PREFIX=$out -DCMAKE_BUILD_TYPE=Release -DKDE_INSTALL_LIBDIR=lib -DBUILD_TESTING=OFF -DKDE_INSTALL_USE_QT_SYS_PATHS=ON
 		make
 		make install
 	'';
