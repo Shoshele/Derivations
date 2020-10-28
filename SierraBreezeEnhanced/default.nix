@@ -23,6 +23,6 @@ stdenv.mkDerivation rec {
 		description = "A fork of Breeze theme that resembles Max OS X.";
 		homepage = "https://github.com/kupiqu/sierrabreezeenhanced";
 		license = licenses.gpl3;
-    platforms = platforms.unix;
+		platforms = platforms.unix;
 	};
 }
